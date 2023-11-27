@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <h1>Home</h1>
-      <Link href="/testroute">testroute link</Link>
+      <Link href="/about">about link</Link>
       <Button outline gradientMonochrome="purple">
         Click Me
       </Button>
