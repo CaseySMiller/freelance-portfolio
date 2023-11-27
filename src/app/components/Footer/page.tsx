@@ -5,7 +5,7 @@ import logo from '../../../../public/assets/images/logo/Full_Logo_Light_Small.pn
 
 import './style.css'
 
-export default function CustomNav() {
+export default function CustomFooter() {
   return (
       <div className="custom-navbar">
         <Image 
