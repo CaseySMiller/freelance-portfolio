@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark bg-zinc-800">
       <body className={inter.className}>
         <CustomNav />
         {children}

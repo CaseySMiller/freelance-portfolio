@@ -3,11 +3,10 @@
 import Image from 'next/image'
 import logo from '../../../../public/assets/images/logo/Full_Logo_Light_Small.png'
 
-import './style.css'
 
 export default function CustomFooter() {
   return (
-      <div className="custom-navbar">
+      <div className="bg-brand-purple">
         <Image 
           src={logo} 
           alt="codeKase Logo" 
