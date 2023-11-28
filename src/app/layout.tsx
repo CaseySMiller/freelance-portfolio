@@ -1,28 +1,37 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import CustomNav from './components/Navbar/page'
-import CustomFooter from './components/Footer/page'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+import { CustomFlowbiteTheme, Flowbite } from "flowbite-react";
+import customTheme from "./lib/customTheme";
+
+import "./globals.css";
+
+import CustomNav from "./components/Navbar/page";
+import CustomFooter from "./components/Footer/page";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "codeKase Freelance Web Development",
   description: "codeKase Freelance Web Development",
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+const customFlowbiteTheme: CustomFlowbiteTheme = customTheme;
+
   return (
     <html lang="en" className="dark bg-zinc-800">
       <body className={inter.className}>
+      <Flowbite theme={{ theme: customFlowbiteTheme }}>
         <CustomNav />
-        {children}
+        <div className="footer-v-spacer">{children}</div>
         <CustomFooter />
+      </Flowbite>
       </body>
     </html>
-  )
+  );
 }
