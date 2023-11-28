@@ -1,10 +1,14 @@
+import { Spinner } from "flowbite-react";
+
 export default function Loading() {
-  // You can add any UI inside Loading, including a Skeleton.
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen">
       <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-white">
-        Loading...
+        <Spinner size="xl" color="purple" /> <span>Loading</span>
+        <Spinner size="xs" className="spinner-period" color="purple" />
+        <Spinner size="xs" className="spinner-period" color="purple" />
+        <Spinner size="xs" className="spinner-period" color="purple" />
       </h1>
     </div>
-  )
+  );
 }

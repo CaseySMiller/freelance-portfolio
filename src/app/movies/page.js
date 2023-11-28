@@ -1,10 +1,11 @@
 import { log } from "console";
+import { Spinner } from "flowbite-react";
 
 async function getMovies() {
   let res = await fetch(
     `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.NEXT_PUBLIC_TMDB_API}`
   );
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   // log(res.json());
   return res.json();
 }
@@ -15,6 +16,12 @@ async function Trending() {
   return (
     <div>
       <h3>Movies</h3>
+      {/* <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-white">
+        <span>Big text</span>
+        <Spinner size='xs' className="spinner-period" />
+        <Spinner size='xs' className="spinner-period" />
+        <Spinner size='xs' className="spinner-period" />
+      </h1> */}
       {results &&
         results.map((index) => {
           // console.log(index.id);

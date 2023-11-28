@@ -43,3 +43,10 @@ body {
 .custom-copyright > span {
   @apply ml-1 hover:underline;
 }
+
+/* edit spinner class to make them periods */
+.spinner-period {
+  vertical-align: baseline;
+  color: white!important;
+  padding-left: .2rem;
+}

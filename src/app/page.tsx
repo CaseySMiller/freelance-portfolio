@@ -34,7 +34,7 @@ export default function Home() {
       <Link href="/about">about link</Link>
       <Link href="/movies">
         <Button outline gradientMonochrome="purple">
-          Click Me
+          Movies
         </Button>
       </Link>
     </Flowbite>
