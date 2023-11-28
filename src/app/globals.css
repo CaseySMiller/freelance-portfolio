@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* override active like behavior on disbled item in dropdown menu */
-.disabled-dropdown {
-  background-color: rgb(55,65,81)!important;
-  color: rgb(24,24,27)!important;
-  cursor: default!important;
-}
-.disabled-dropdown:hover {
-  background-color: rgb(55,65,81)!important;
-  color: rgb(24,24,27)!important;
-  cursor: default!important;
-}
-
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -37,4 +25,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+}
+
+/* override active like behavior on disbled item in dropdown menu */
+.disabled-dropdown {
+  background-color: rgb(55,65,81)!important;
+  color: rgb(24,24,27)!important;
+  cursor: default!important;
+}
+.disabled-dropdown:hover {
+  background-color: rgb(55,65,81)!important;
+  color: rgb(24,24,27)!important;
+  cursor: default!important;
+}
+
+/* provide link styling to copyright element */
+.custom-copyright > span {
+  @apply ml-1 hover:underline;
 }

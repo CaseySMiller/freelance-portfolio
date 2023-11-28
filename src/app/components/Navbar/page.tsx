@@ -36,7 +36,7 @@ export default function CustomNav() {
       initials: "JD",
       email: "john@doe.com",
     }
-    // setUser(userdata);
+    setUser(userdata);
   }, []);
 
 
@@ -44,7 +44,7 @@ export default function CustomNav() {
   return (
     <Flowbite>
       <Navbar fluid rounded className='!bg-brand-purple'>
-        <Navbar.Brand as={Link} href="https://flowbite-react.com">
+        <Navbar.Brand as={Link} href="/">
           <Image 
             src={logo} 
             alt="codeKase Logo" 
