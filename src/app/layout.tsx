@@ -6,6 +6,7 @@ import customTheme from "./lib/customTheme";
 
 import "./globals.css";
 
+import ParticleComponent from "./components/ParticleComponent/ParticleComponent"
 import CustomNav from "./components/Navbar/page";
 import CustomFooter from "./components/Footer/page";
 
@@ -22,11 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 const customFlowbiteTheme: CustomFlowbiteTheme = customTheme;
-
+//change
   return (
     <html lang="en" className="dark bg-zinc-800">
       <body className={inter.className}>
       <Flowbite theme={{ theme: customFlowbiteTheme }}>
+        <ParticleComponent />
         <CustomNav />
         <div className="footer-v-spacer">{children}</div>
         <CustomFooter />

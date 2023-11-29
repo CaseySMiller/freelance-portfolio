@@ -50,3 +50,8 @@ body {
 .footer-v-spacer {
   min-height: calc(100vh - var(--hd-ft-total));}
 
+.carousel-container{
+  position: absolute;
+  height: calc(100vh - var(--hd-ft-total));
+  width: 100vw;
+}

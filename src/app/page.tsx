@@ -2,27 +2,26 @@
 
 // import { useState } from "react";
 import Link from "next/link";
-import { Button, } from "flowbite-react";
+import { Button } from "flowbite-react";
+
+import ThreeJsCarousel from "./components/ThreeJsCarousel/ThreeJsCarousel";
 
 export default function Home() {
-  // const [waitDone, setWaitDone] = useState("waiting");
-  const fakeWait = new Promise((resolve) => setTimeout(resolve, 8000));
-
-  // fakeWait.then(() => {
-  //   setWaitDone("done");
-  // });
-
-  // useEffect(() => {
-  //   fakeWait.then(() => {
-  //     console.log("done");
-  //   });
-  // }, []);
+  const imgArr = [
+    "/assets/images/carouselImages/cyberpunk-city-7415576_1280.jpg",
+    "/assets/images/carouselImages/dreaming-7415565_1280.jpg",
+    "/assets/images/carouselImages/northern-7415567_1280.jpg",
+    "/assets/images/carouselImages/studio-ghibli-7415572_1280.jpg",
+    "/assets/images/carouselImages/wallpaper-7415568_1280.jpg",
+    "/assets/images/carouselImages/wallpaper-7415571_1280.jpg",
+  ];
 
   return (
     <>
+      <div className="carousel-container">
+        <ThreeJsCarousel imgArr={imgArr} />
+      </div>
       <h1>Home</h1>
-      {/* <p>{waitDone}</p> */}
-      <Link href="/about">about link</Link>
       <Link href="/movies">
         <Button outline gradientMonochrome="purple">
           Movies

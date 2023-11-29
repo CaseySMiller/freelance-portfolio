@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Navbar, Dropdown, Avatar, } from "flowbite-react";
+import { Navbar, Dropdown, Avatar } from "flowbite-react";
 import logo from "../../../../public/assets/images/logo/Full_Logo_Light_Small.png";
 
 interface User {
@@ -98,28 +98,36 @@ export default function CustomNav() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active={pathname === "/" ? true : false}>
-          Home
+        <Navbar.Link 
+          as={Link} 
+          href="/" 
+          active={pathname === "/" ? true : false}
+        >
+            Home
         </Navbar.Link>
         <Navbar.Link
+          as={Link}
           href="/about"
           active={pathname === "/about" ? true : false}
         >
           About
         </Navbar.Link>
         <Navbar.Link
+          as={Link}
           href="/projects"
           active={pathname === "/projects" ? true : false}
         >
           My Projects
         </Navbar.Link>
         <Navbar.Link
+          as={Link}
           href="/pricing"
           active={pathname === "/pricing" ? true : false}
         >
           Pricing
         </Navbar.Link>
         <Navbar.Link
+          as={Link}
           href="/contact"
           active={pathname === "/contact" ? true : false}
         >
