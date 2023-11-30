@@ -26,8 +26,6 @@ export default function RootLayout({
 }) {
   const customFlowbiteTheme: CustomFlowbiteTheme = customTheme;
 
-  console.log(exo_2.className);
-  
   return (
     <html lang="en" className="bg-zinc-800">
       <body className={`${exo_2.className} dark`}>
