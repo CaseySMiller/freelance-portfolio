@@ -8,7 +8,6 @@ import Cylinder3d from "./Cylinder3d";
 // imgArr should be an array of 3, 6 or 12 URL strings for images
 // images should be 16:9 aspect ratio (1280x720)
 const ThreeJsCarousel = ({ imgArr }) => {
-  console.log('3jscar');
   return (
     <Canvas camera={{ fov: 75, position: [0, 4, 40] }}>
       {/* <axesHelper args={[30, 30, 30]} /> */}

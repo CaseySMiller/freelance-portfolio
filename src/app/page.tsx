@@ -13,7 +13,8 @@ export default function Home() {
     "/assets/images/carouselImages/northern-7415567_1280.jpg",
     "/assets/images/carouselImages/studio-ghibli-7415572_1280.jpg",
     "/assets/images/carouselImages/wallpaper-7415568_1280.jpg",
-    "/assets/images/carouselImages/wallpaper-7415571_1280.jpg",
+    // "/assets/images/carouselImages/wallpaper-7415571_1280.jpg",
+    "/assets/images/carouselImages/metaAF.png",
   ];
 
   return (

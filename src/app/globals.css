@@ -8,6 +8,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --hd-ft-total: 104px;
+  @apply dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,8 +19,15 @@
   }
 }
 
+@layer base {
+  body {
+    @apply dark
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
+  @apply dark;
 }
 
 /* override active like behavior on disbled item in dropdown menu */

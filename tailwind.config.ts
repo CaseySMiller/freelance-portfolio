@@ -18,5 +18,8 @@ const config: Config = {
     },
   },
   plugins: [require('flowbite/plugin')],
+  safelist: [
+    'dark',
+  ],
 }
 export default config
