@@ -30,9 +30,6 @@ export default function RootLayout({
   
   return (
     <html lang="en" className="bg-zinc-800">
-      {/* <head>
-        <ThemeModeScript />
-      </head> */}
       <body className={`${exo_2.className} dark`}>
         <Flowbite theme={{ theme: customFlowbiteTheme }}>
           <ParticleComponent />

@@ -46,7 +46,7 @@ export default function CustomFooter() {
             <Footer.Icon icon={BsLinkedin} />
           </Link>
           <Link
-            href="https://www.facebook.com/profile.php?id=100017456736791"
+            href="https://www.facebook.com/profile.php?id=61554002825177"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 dark:hover:text-white"
