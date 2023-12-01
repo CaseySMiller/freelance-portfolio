@@ -2,7 +2,7 @@
 
 // import { useState } from "react";
 import Link from "next/link";
-import { Button } from "flowbite-react";
+import { Button, Card } from "flowbite-react";
 
 import ThreeJsCarousel from "./components/ThreeJsCarousel/ThreeJsCarousel";
 
@@ -23,12 +23,25 @@ export default function Home() {
       <div className="carousel-container">
         <ThreeJsCarousel imgArr={imgArr} />
       </div>
-      <h1>Home</h1>
-      <Link href="/movies">
-        <Button outline gradientMonochrome="purple">
-          Movies
-        </Button>
-      </Link>
+      <div className="container columns-3 mx-auto pt-3 w-100">
+        <div className="w-full h-full">
+          <Card className="w-full relative opacity-25">
+            <p className="opacity-100">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, illo corrupti doloremque voluptatibus, adipisci quisquam nisi nam hic deleniti repellat, debitis nulla dolorum voluptate quidem autem. Velit ab explicabo aliquam.
+            </p>
+          </Card>
+        </div>
+        <div className="w-full h-full">
+          <h1 >Home</h1>
+        </div>
+        <div className="w-full h-full">
+          <Card className="w-full relative">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, illo corrupti doloremque voluptatibus, adipisci quisquam nisi nam hic deleniti repellat, debitis nulla dolorum voluptate quidem autem. Velit ab explicabo aliquam.
+            </p>
+          </Card>
+        </div>
+      </div>
     </>
   );
 }
