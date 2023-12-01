@@ -7,8 +7,8 @@ import { text } from "stream/consumers";
 interface tCardProps {
   title?: string;
   textContent: string;
-  bgOpacity?: number;
-  textOpacity?: number;
+  bgOpacity?: number | string;
+  textOpacity?: number | string;
   fullOonHover?: boolean;
   textClass?: string;
   titleClass?: string;
@@ -16,19 +16,18 @@ interface tCardProps {
   className?: string;
 }
 
-function TansparencyCard({
+function OpacityCard({
   title,
   textContent,
-  bgOpacity,
-  textOpacity,
+  bgOpacity = ".5",
+  textOpacity = ".75",
   fullOonHover = true,
   className,
   titleClass,
   textClass,
   bgClass,
 }: tCardProps) {
-  bgOpacity = bgOpacity || 1;
-  textOpacity = textOpacity || 1;
+
 
   const cardStyle = {
     bgStyle: {
@@ -45,17 +44,21 @@ function TansparencyCard({
   const bgClassTrue = bgClass || "";
   const classNameTrue = className || "";
 
-  const bgEl = useRef(null);
-  const textEl = useRef(null);
+  // set opacity props to strings if they are numbers
+  const bgOpacityStr = typeof bgOpacity === "number" ? bgOpacity.toString() : bgOpacity;
+  const textOpacityStr = typeof textOpacity === "number" ? textOpacity.toString() : textOpacity;
+
+  const bgEl = useRef<null | HTMLDivElement>(null);
+  const textEl = useRef<null | HTMLDivElement>(null);
 
   const handleEnter = () => {
-    bgEl.current.style.opacity = 1; 
-    textEl.current.style.opacity = 1
+    bgEl.current ? bgEl.current.style.opacity = "1" : null; 
+    textEl.current ? textEl.current.style.opacity = "1" : null;
   }
   
   const handleExit = () => {
-    bgEl.current.style.opacity = bgOpacity; 
-    textEl.current.style.opacity = textOpacity
+    bgEl.current ? bgEl.current.style.opacity = bgOpacityStr : null; 
+    textEl.current ? textEl.current.style.opacity = textOpacityStr : null;
   }
   // const handleExit = (e) => {e.target.style.opacity = .5}
   // const handleEnter = (e) => {console.log(bgBox.current.style.opacity)}
@@ -78,8 +81,8 @@ function TansparencyCard({
           className={`invisible relative flex-grow justify-center p-6 ${textClassTrue}`}
           style={cardStyle.textStyle}
         >
-          {title ? <h1 className={titleClassTrue}>{title}</h1> : null}
-          <p className={`relative border border-red-600 ${textClassTrue}`}>
+          {title ? <h2 className={`overflow-clip border-b pb-2 ${titleClassTrue}`}>{title}</h2> : null}
+          <p className={`relative border overflow-clip pt-3 ${textClassTrue}`}>
             {textContent}
           </p>
         </div>
@@ -91,9 +94,9 @@ function TansparencyCard({
           ref={textEl}
         >
           {title ? (
-            <h1 className={`overflow-clip ${titleClassTrue}`}>{title}</h1>
+            <h2 className={`overflow-clip border-b pb-2 ${titleClassTrue}`}>{title}</h2>
           ) : null}
-          <p className={`relative overflow-clip ${textClassTrue}`}>
+          <p className={`relative overflow-clip pt-3 ${textClassTrue}`}>
             {textContent}
           </p>
         </div>
@@ -102,4 +105,4 @@ function TansparencyCard({
   );
 }
 
-export default TansparencyCard;
+export default OpacityCard;
