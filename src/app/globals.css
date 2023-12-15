@@ -57,6 +57,7 @@ body {
 /* create an element class to make footer always be at bottom of page or below */
 .footer-v-spacer {
   min-height: calc(100vh - var(--hd-ft-total));
+  /* min-height: 100%; */
   display: flex;
 }
 
@@ -73,5 +74,11 @@ body {
   .carousel-container{
     height: calc(100vw / 1.7777777777777777);
     /* margin-top: calc(100vh / 3); */
+  }
+
+  .footer-v-spacer {
+    /* min-height: calc(100vh - var(--hd-ft-total)); */
+    min-height: 100%;
+    /* display: flex; */
   }
 }

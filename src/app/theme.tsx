@@ -1,3 +1,3 @@
 export const metadata = {
-  manifest: '/manifest.webmanifest',
+  // manifest: '/manifest.webmanifest',
 }
