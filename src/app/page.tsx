@@ -7,6 +7,10 @@ import { Button, Card } from "flowbite-react";
 import ThreeJsCarousel from "./components/ThreeJsCarousel/ThreeJsCarousel";
 import OpacityCard from "./components/OpacityCard/OpacityCard";
 
+const cardText1 = 'codeKase Ltd. is a freelance web development company based in the USA and solely owned by Casey Miller. We specialise in building bespoke websites and web applications for small to medium sized businesses.';
+
+const cardText2 = 'Whatever your needs; from desktop to mobile, full-stack to graphic design, we have you covered. We can build your website from the ground up or we can work with your existing website to add new features or fix bugs. If you want flashy that is what you will get. If you want simple and clean we can provide. We work with you to make sure you get exactly what you want.';
+
 export default function Home() {
   const imgArr = [
     "/assets/images/carouselImages/cyberpunk-city-7415576_1280.jpg",
@@ -24,15 +28,16 @@ export default function Home() {
       <div className="carousel-container">
         <ThreeJsCarousel imgArr={imgArr} />
       </div>
-      <div className="container grid lg:grid-cols-5 mx-auto pt-3 w-100 gap-y-4 gap-x-2 px-2 pb-8">
-        <div className="w-full  grid justify-center lg:col-span-5 lg:pt-16">
-          <h1 className="z-10">Home</h1>
+      <div className="container h-full grid lg:grid-cols-5 mx-auto pt-3 w-100 gap-y-4 lg:gap-y-20 gap-x-2 px-2 pb-8">
+        <div className="line w-full grid justify-center lg:col-span-5 lg:py-16">
+          <h1 className=" flipY z-10 text-4xl md:text-6xl">Welcome to codeKase Ltd.</h1>
         </div>
         <div className="w-full lg:h-full lg:col-span-2">
           <OpacityCard
-            className="self-center"
-            title="Hi There"
-            textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, illo corrupti doloremque voluptatibus, adipisci quisquam nisi nam hic deleniti repellat, debitis nulla dolorum voluptate quidem autem. Velit ab explicabo aliquam."
+            className="text-xl"
+            title="Who We Are"
+            titleClass="text-center"
+            textContent={cardText1}
             bgOpacity={0.25}
             textOpacity={0.9}
           />
@@ -41,8 +46,10 @@ export default function Home() {
 
         <div className="w-full lg:h-full lg:col-span-2">
           <OpacityCard
-            title="Hi There #2"
-            textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, illo corrupti doloremque voluptatibus, adipisci quisquam nisi nam hic deleniti repellat, debitis nulla dolorum voluptate quidem autem. Velit ab explicabo aliquam."
+            className="text-xl"
+            title="What We Do"
+            titleClass="text-center"
+            textContent={cardText2}
             bgOpacity={0.25}
             textOpacity={0.9}
           />

@@ -52,7 +52,7 @@ function OpacityCard({
   const textEl = useRef<null | HTMLDivElement>(null);
 
   const handleEnter = () => {
-    bgEl.current ? bgEl.current.style.opacity = "1" : null; 
+    bgEl.current ? bgEl.current.style.opacity = ".9" : null; 
     textEl.current ? textEl.current.style.opacity = "1" : null;
   }
   
