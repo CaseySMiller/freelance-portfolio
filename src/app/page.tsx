@@ -1,13 +1,9 @@
 // "use client";
 
-// import { useState } from "react";
-import Link from "next/link";
-import { Button, Card } from "flowbite-react";
-
 import ThreeJsCarousel from "./components/ThreeJsCarousel/ThreeJsCarousel";
 import OpacityCard from "./components/OpacityCard/OpacityCard";
 
-const cardText1 = 'codeKase Ltd. is a freelance web development company based in the USA and solely owned by Casey Miller. We specialise in building bespoke websites and web applications for small to medium sized businesses.';
+const cardText1 = 'codeKase Ltd. is a freelance web development company based in the USA and solely owned by Casey Miller. We specialise in building bespoke websites and web applications for small to medium sized businesses. We use the most modern technologies such as Next.js to develop lightning fast web applications that are SEO friendly and responsive. We also use the latest design trends to make sure your website looks great on any device.';
 
 const cardText2 = 'Whatever your needs; from desktop to mobile, full-stack to graphic design, we have you covered. We can build your website from the ground up or we can work with your existing website to add new features or fix bugs. If you want flashy that is what you will get. If you want simple and clean we can provide. We work with you to make sure you get exactly what you want.';
 

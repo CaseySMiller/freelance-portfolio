@@ -117,7 +117,7 @@ export default function CustomNav() {
           href="/projects"
           active={pathname === "/projects" ? true : false}
         >
-          My Projects
+          Projects
         </Navbar.Link>
         <Navbar.Link
           as={Link}
