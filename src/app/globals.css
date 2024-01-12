@@ -86,7 +86,7 @@ body {
 .flipY {
   animation-name: spin, depth;
   animation-timing-function: linear;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-duration: 6s;
 }
 @keyframes spin {
