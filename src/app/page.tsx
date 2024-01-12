@@ -9,14 +9,15 @@ const cardText2 = 'Whatever your needs; from desktop to mobile, full-stack to gr
 
 export default function Home() {
   const imgArr = [
-    "/assets/images/carouselImages/cyberpunk-city-7415576_1280.jpg",
-    "/assets/images/carouselImages/dreaming-7415565_1280.jpg",
-    "/assets/images/carouselImages/northern-7415567_1280.jpg",
-    "/assets/images/carouselImages/studio-ghibli-7415572_1280.jpg",
+    // "/assets/images/carouselImages/cyberpunk-city-7415576_1280.jpg",
+    // "/assets/images/carouselImages/dreaming-7415565_1280.jpg",
+    // "/assets/images/carouselImages/northern-7415567_1280.jpg",
+    // "/assets/images/carouselImages/studio-ghibli-7415572_1280.jpg",
     // "/assets/images/carouselImages/wallpaper-7415568_1280.jpg",
     // "/assets/images/carouselImages/wallpaper-7415571_1280.jpg",
     "/assets/images/carouselImages/metaAF.png",
     "/assets/images/carouselImages/devMind.png",
+    "/assets/images/carouselImages/digitalCasey.jpg",
   ];
 
   return (
