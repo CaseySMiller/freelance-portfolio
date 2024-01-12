@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <div className="container h-full grid lg:grid-cols-5 mx-auto pt-3 w-100 gap-y-4 lg:gap-y-20 gap-x-2 px-2 pb-8">
         <div className="line w-full grid justify-center lg:col-span-5 lg:py-16">
-          <h1 className=" flipY z-10 text-4xl md:text-6xl">Welcome to codeKase Ltd.</h1>
+          <h1 className=" flipY z-10 text-2xl sm:text-4xl md:text-6xl">Welcome to codeKase Ltd.</h1>
         </div>
         <div className="w-full lg:h-full lg:col-span-2">
           <OpacityCard
