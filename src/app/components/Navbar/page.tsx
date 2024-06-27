@@ -27,8 +27,9 @@ export default function CustomNav() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Simulate user data
     const userdata: User = {
-      isLoggedIn: true,
+      isLoggedIn: false,
       firstName: "John",
       lastName: "Doe",
       initials: "JD",
@@ -76,24 +77,26 @@ export default function CustomNav() {
             disabled={user.isLoggedIn ? false : true}
             className={!user.isLoggedIn ? "disabled-dropdown" : ""}
           >
-            Dashboard
+            Backend
           </Dropdown.Item>
           <Dropdown.Item
             href="/"
             disabled={user.isLoggedIn ? false : true}
             className={!user.isLoggedIn ? "disabled-dropdown" : ""}
           >
-            Settings
+            Coming
           </Dropdown.Item>
           <Dropdown.Item
             href="/"
             disabled={user.isLoggedIn ? false : true}
             className={!user.isLoggedIn ? "disabled-dropdown" : ""}
           >
-            Invoices
+            Soon
           </Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Item>Sign out</Dropdown.Item>
+          <Dropdown.Item>
+            {user.isLoggedIn ? "Sign out" : "Sign in"}
+          </Dropdown.Item>
         </Dropdown>
         <Navbar.Toggle />
       </div>
