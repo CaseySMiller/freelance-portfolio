@@ -11,7 +11,6 @@ export default function Projects() {
             className="w-1/2"
             title="Project 1"
             textContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum blanditiis assumenda impedit nisi necessitatibus quaerat commodi laborum in laudantium."
-            imgOpacity={1}
             cardImg={{
                 URL: "/assets/images/logo/Full_Logo_Light_Small.png",
                 height: 480,
