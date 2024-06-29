@@ -1,23 +1,33 @@
-import UnderConstruction from "../components/UnderConstruction/UnderConstruction"
-import OpacityCard from "../components/OpacityCard/OpacityCard"
+// import UnderConstruction from "../components/UnderConstruction/UnderConstruction"
 import Image from "next/image"
+import OpacityCard from "../components/OpacityCard/OpacityCard";
+import ProjectCardStack from "../components/ProjectCardStack/ProjectCardStack";
+import { projectData } from "../lib/projectData";
+
 
 export default function Projects() {
-    return (
-        <div className="container mx-auto my-auto w-1/2">
-            {/* <h1>Projects</h1> */}
 
-            <OpacityCard 
-            className="w-1/2"
-            title="Project 1"
-            textContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum blanditiis assumenda impedit nisi necessitatibus quaerat commodi laborum in laudantium."
-            cardImg={{
-                URL: "/assets/images/logo/Full_Logo_Light_Small.png",
-                height: 480,
-                width: 640,
-                alt: "placeholder"
-            }}
-            />
-        </div>
-    )
+  // function to fill stackData with 5 projectData objects even if it has to repeat
+  const fillStackData = () => {
+    const stackOutput = [];
+
+    let stackTracker = 0;
+    for (let i = 0; i < 5; i++) {
+      if (i - stackTracker < projectData.length) {
+        stackOutput.push(projectData[i - stackTracker])        
+      } else {
+        stackTracker += projectData.length;
+        stackOutput.push(projectData[i - stackTracker])
+      }
+    }
+    return stackOutput;
+  };
+
+  const stackData = fillStackData();  
+  
+  return (
+    <div className="container mx-auto my-auto h-full w-2/3 ">
+      <ProjectCardStack stackData={stackData} />
+    </div>
+  );
 }
